@@ -117,9 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
-export PYPI_USER="pipka"
-export PYPI_PASSWORD="yoxi3lVLNiCF7Zj9v"
 export XCURSOR_SIZE=14
+
 # Shell-GPT integration BASH v0.1
 _sgpt_bash() {
 if [[ -n "$READLINE_LINE" ]]; then
@@ -157,3 +156,9 @@ fi
 
 bind -x '"\C-p": reset_text_chat'
 bind -x '"\C-o": write_in_chat'
+alias reenroll_fp="fprintd-enroll -f right-index-finger $USER"
+# - tr069 pypi credentials 
+# - ...
+if [ -f ~/.credentials ]; then                                                                                                                                                                                                                                              
+    source ~/.credentials                                                                                                                                                                                                                                                   
+fi    
